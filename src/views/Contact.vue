@@ -39,7 +39,7 @@ export default {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 620px;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }

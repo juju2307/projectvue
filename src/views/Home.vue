@@ -2,19 +2,16 @@
     <div>
          <div id="intro"></div>
             <p class="bienvenue">Bienvenue !</p>
-          <div class="action">
-               <p>PROMOTION SUR LA 4 FROMAGES</p>
-               <p>NOUVEAUTE - PIZZA ROYALE</p>
-               <p>JEU CONCOURS</p>
-          </div>
+            <div class="action">
+                <p>PROMOTION SUR LA 4 FROMAGES</p>
+                <p>NOUVEAUTE - PIZZA ROYALE</p>
+                <p>JEU CONCOURS</p>
+            </div>
          <slot name="Welcome"></slot>
          <slot></slot>
          <div class="product-menu">
              <Products/>
-             <Products/>
-             <Products/>
-             <Products/>
-             <Products/>
+            
          </div>
     </div>
     </template>
@@ -45,12 +42,15 @@ export default {
         background-image: url("/assets/images/pizza-menu.jpg");
         background-position:top;
         background-size: cover;
+        height: 100%;
         color: white;
         font-size: 2em;
         font-weight: bold;
-        height: 550px;
+        height: 90vh;
         padding: 3%;
         text-shadow: black 0.1em 0.1em 0.2em;
+      
+       
      
     }
     .product-menu{
@@ -64,8 +64,8 @@ export default {
     display: flex;
     justify-content: center;
     color: white;
-    margin-top: -270px;
-    margin-bottom: 260px;
+    margin-top: -350px;
+    margin-bottom: 300px;
     margin-left: 650px;
     font-size: 50px;
   }

@@ -1,14 +1,14 @@
 <template>
 
-     <article>
+     <article v-for="(type,index) in types" :key="index">
          <div class="product-img">
            <img v-bind:src="image"/>
          </div>
          <div class="product-description">
-               <h3>{{title}}</h3>
+               <h3>Pizza {{type}}</h3>
                <p>Prix : {{price}} €</p>
                <p v-for="(ingredient, index) in ingredients" :key="index">{{ingredient + ","}}</p>
-               <a href="#">Commander >></a>
+               <router-link :to="{name: 'product-details', params: {name: 'un-parametre'}}">Commander >></router-link>
          </div>
      </article>
 
@@ -22,7 +22,7 @@ export default {
     data() {
       return{
           price: 12,
-          title: "Pizza Royale",
+          types:["royale", "orientale", "4 fromages", "barbecue", "vegetarienne"],
           image: "../assets/images/Pizza2.jpg",
           ingredients: [
             "Olives",
