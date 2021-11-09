@@ -6,6 +6,7 @@
                 <p>PROMOTION SUR LA 4 FROMAGES</p>
                 <p>NOUVEAUTE - PIZZA ROYALE</p>
                 <p>JEU CONCOURS</p>
+                <Likes/>
             </div>
          <slot name="Welcome"></slot>
          <slot></slot>
@@ -16,9 +17,14 @@
     </div>
     </template>
 
-<script>
+<script scoped>
+   import Likes from "../components/Likes.vue";
+
 export default {
     name: "Home",
+    components: {
+        Likes
+    },
 
     data() {
         return {

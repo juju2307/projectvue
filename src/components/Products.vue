@@ -8,7 +8,7 @@
                <h3>Pizza {{type}}</h3>
                <p>Prix : {{price}} €</p>
                <p v-for="(ingredient, index) in ingredients" :key="index">{{ingredient + ","}}</p>
-               <router-link :to="{name: 'product-details', params: {name: 'un-parametre'}}">Commander >></router-link>
+               <router-link :to="{name: 'product-details', params: {name: type}}">Commander >></router-link>
          </div>
      </article>
 

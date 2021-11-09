@@ -94,15 +94,10 @@
 export default {
     name: 'product-details',
 
-    props: {
-        bestseller:{
-            type: Boolean,
-        }
-    },
+    props: ['name'],
     data() {
             return{
             product: "Pizza",
-            type: "Oriental",
             price: 12,
             totalPrice: 0,
             nbrProduct: 0,
@@ -175,7 +170,7 @@ export default {
     },
        computed: {
         title() {
-            return this.product + "" + this.type;
+            return this.product + " " + this.name;
         }
     }
 
@@ -191,13 +186,13 @@ export default {
     display: flex;
     flex-direction: row;
     width: 900px;
-    margin-left: 390px;
+    margin-left: 50px;
 
 }
 img{
     width: 500px;
     height: 350px;
-    margin-top: 200px;
+    margin-top: 50px;
     border-radius: 20px;
 }
 .img-best-seller{
